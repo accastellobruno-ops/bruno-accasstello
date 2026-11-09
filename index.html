@@ -1,0 +1,643 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>M.V. Bruno Accastello · Podología Bovina</title>
+<meta name="description" content="Podología bovina profesional en tu campo. Recorte funcional, tratamiento de cojeras y plan preventivo para tambos y rodeos de carne. M.V. Bruno Accastello, MP 4568.">
+<!-- Vista previa al compartir (WhatsApp, Facebook, etc.) -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_AR">
+<meta property="og:site_name" content="M.V. Bruno Accastello">
+<meta property="og:title" content="M.V. Bruno Accastello · Podología bovina">
+<meta property="og:description" content="Menos cojeras, más producción. Recorte funcional, tratamiento y prevención de cojeras en tu campo.">
+<meta property="og:url" content="https://bruno-accastello.vercel.app/">
+<meta property="og:image" content="https://bruno-accastello.vercel.app/imagen-compartir.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#2B2E33">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23D62839'/%3E%3Cg transform='translate(16 11) scale(.16)' fill='none' stroke='%23fff' stroke-width='20' stroke-linejoin='round'%3E%3Cpath d='M90 22C58 28 30 76 30 138c0 52 26 82 60 82z'/%3E%3Cpath d='M110 22c32 6 60 54 60 116 0 52-26 82-60 82z'/%3E%3C/g%3E%3C/svg%3E">
+<script>document.documentElement.classList.add('js')</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  /* Paleta: grafito y rojo */
+  :root{
+    --bg:#ECEDEF;
+    --soft:#E0E2E5;
+    --surface:#F7F7F8;
+    --ink:#1F2226;
+    --muted:#5E636A;
+    --line:#CDD0D5;
+    --brand:#2B2E33;
+    --brand-tint:#DEE0E3;
+    --on-brand:#FFFFFF;
+    --accent:#E03141;
+    --on-accent:#FFFFFF;
+    --hl-ink:var(--cta);
+    --hl-bg:transparent;
+    --cta:#D62839;
+    --on-cta:#FFFFFF;
+    --bar:#1A1C1F;
+    --band:#2B2E33;
+    --nav-bg:rgba(236,237,239,.92);
+    --radius:20px;
+    --shadow:0 24px 60px -24px rgba(26,28,31,.32);
+    --wrap:1200px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;scroll-padding-top:90px}
+  body{background:var(--bg);color:var(--ink);font-family:"Manrope",system-ui,-apple-system,sans-serif;font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  a{color:inherit;text-decoration:none}
+  img,svg{display:block}
+  .wrap{max-width:var(--wrap);margin:0 auto;padding:0 24px}
+  h1,h2,h3{line-height:1.08;letter-spacing:-.025em;font-weight:800}
+  .tag{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--cta)}
+  .tag::before{content:"";width:22px;height:3px;border-radius:3px;background:var(--cta)}
+  .hl{position:relative;white-space:nowrap;z-index:0;color:var(--hl-ink)}
+  .hl::after{content:"";position:absolute;left:-4px;right:-4px;bottom:.06em;height:.36em;background:var(--hl-bg);border-radius:4px;z-index:-1;transform-origin:left;transform:scaleX(1)}
+  .js .hl::after{transform:scaleX(0);transition:transform .8s .5s cubic-bezier(.2,.7,.2,1)}
+  .js .loaded .hl::after{transform:scaleX(1)}
+
+  /* Buttons */
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:16px 26px;border-radius:14px;font-weight:700;font-size:16px;transition:transform .18s,box-shadow .18s,background .18s;white-space:nowrap;border:2px solid transparent}
+  .btn svg{width:20px;height:20px;flex:none}
+  .btn-primary{background:var(--cta);color:var(--on-cta);box-shadow:0 10px 24px -10px rgba(0,0,0,.45)}
+  .btn-primary:hover{filter:brightness(.92);transform:translateY(-2px);box-shadow:0 16px 30px -12px rgba(0,0,0,.5)}
+  .btn-outline{border-color:var(--ink);color:var(--ink);background:var(--surface)}
+  .btn-outline:hover{background:var(--ink);color:var(--bg)}
+  .btn-yellow{background:var(--accent);color:var(--on-accent)}
+  .btn-yellow:hover{transform:translateY(-2px);box-shadow:0 14px 28px -12px rgba(0,0,0,.4)}
+  .btn-white-outline{border-color:rgba(255,255,255,.55);color:#fff}
+  .btn-white-outline:hover{background:#fff;color:var(--band)}
+  .btn-sm{padding:11px 18px;font-size:15px;border-radius:12px}
+
+  /* Top bar */
+  .topbar{background:var(--bar);color:rgba(255,255,255,.85);font-size:14px}
+  .topbar .wrap{display:flex;justify-content:space-between;align-items:center;height:40px;gap:16px}
+  .topbar .dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--accent);margin-right:8px;box-shadow:0 0 0 0 rgba(224,49,65,.7);animation:pulse 2s infinite}
+  @keyframes pulse{70%{box-shadow:0 0 0 8px rgba(224,49,65,0)}100%{box-shadow:0 0 0 0 rgba(224,49,65,0)}}
+  .topbar a{font-weight:700;color:#fff}
+
+  /* Nav */
+  .nav{position:sticky;top:0;z-index:50;background:var(--nav-bg);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid transparent;transition:border-color .25s,box-shadow .25s}
+  .nav.scrolled{border-color:var(--line);box-shadow:0 6px 20px -14px rgba(11,31,51,.35)}
+  .nav .wrap{display:flex;align-items:center;justify-content:space-between;height:76px}
+  .brand{display:flex;align-items:center;gap:12px}
+  .logo{width:44px;height:44px;border-radius:12px;background:var(--brand);display:grid;place-items:center;flex:none}
+  .logo svg{width:22px;height:26px}
+  .brand b{display:block;font-size:17px;font-weight:800;letter-spacing:-.01em;line-height:1.2}
+  .brand small{display:block;font-size:13px;color:var(--muted);font-weight:500}
+  .nav-links{display:flex;align-items:center;gap:30px;font-size:15px;font-weight:600;color:var(--muted)}
+  .nav-links a:not(.btn):hover{color:var(--ink)}
+
+  /* Hero */
+  .hero{position:relative;padding:72px 0 96px;background:
+      radial-gradient(800px 420px at 85% 10%, var(--brand-tint), transparent 70%),
+      var(--bg);overflow:hidden}
+  .hero .wrap{display:grid;grid-template-columns:1.08fr .92fr;gap:56px;align-items:center}
+  .badge{display:inline-flex;align-items:center;gap:10px;padding:8px 14px 8px 8px;border-radius:999px;background:var(--surface);border:1px solid var(--line);font-size:14px;font-weight:600;box-shadow:0 4px 14px -8px rgba(11,31,51,.25)}
+  .badge span{background:var(--brand);color:var(--on-brand);border-radius:999px;padding:3px 10px;font-size:12px;font-weight:700;letter-spacing:.03em}
+  .hero h1{font-size:clamp(42px,6vw,76px);margin:24px 0 22px}
+  .hero .sub{font-size:clamp(18px,1.6vw,20px);color:var(--muted);max-width:520px}
+  .hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
+  .checks{display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:28px;font-size:15px;font-weight:600}
+  .checks li{list-style:none;display:flex;align-items:center;gap:8px}
+  .checks svg{width:20px;height:20px;flex:none}
+
+  /* Hero visual — report card */
+  .visual{position:relative}
+  .report{background:var(--surface);border:1px solid var(--line);border-radius:24px;box-shadow:var(--shadow);padding:26px 26px 46px;position:relative;z-index:1}
+  .report-head{display:flex;justify-content:space-between;align-items:center;padding-bottom:18px;border-bottom:1px solid var(--line)}
+  .report-head b{font-size:17px}
+  .report-head small{display:block;color:var(--muted);font-size:13px;font-weight:500}
+  .pill{font-size:12px;font-weight:700;padding:5px 10px;border-radius:999px;background:var(--brand-tint);color:var(--brand)}
+  .score{margin:20px 0 6px}
+  .score-row{display:grid;grid-template-columns:96px 1fr 34px;align-items:center;gap:12px;font-size:14px;margin-bottom:12px;color:var(--muted);font-weight:600}
+  .bar{height:10px;border-radius:10px;background:var(--soft);overflow:hidden}
+  .bar i{display:block;height:100%;border-radius:10px;background:var(--brand);width:var(--w)}
+  .js .bar i{width:0;transition:width 1.2s cubic-bezier(.2,.7,.2,1)}
+  .js .loaded .bar i{width:var(--w)}
+  .bar.y i{background:#F2B33D}
+  .bar.r i{background:#F26B4F}
+  .score-row em{font-style:normal;color:var(--ink);text-align:right}
+  .cases{margin-top:16px;display:grid;gap:10px}
+  .case{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 14px;border-radius:14px;background:var(--soft);font-size:14px}
+  .case b{font-weight:700}
+  .case span{color:var(--muted)}
+  .case .ok{flex:none;width:26px;height:26px;border-radius:50%;background:var(--brand);display:grid;place-items:center}
+  .case .ok svg{width:14px;height:14px}
+  .float{position:absolute;z-index:2;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:12px 16px;display:flex;align-items:center;gap:12px;font-size:14px;font-weight:700;box-shadow:var(--shadow);animation:bob 5s ease-in-out infinite}
+  .float small{display:block;color:var(--muted);font-weight:500;font-size:12px}
+  .float .ic{width:38px;height:38px;border-radius:11px;display:grid;place-items:center;flex:none}
+  .float .ic svg{width:20px;height:20px}
+  .f1{left:-30px;bottom:-26px}
+  .f2{right:-20px;top:-24px;animation-delay:-2.5s}
+  @keyframes bob{50%{transform:translateY(-8px)}}
+
+  /* Trust strip */
+  .trust{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--surface)}
+  .trust .wrap{display:grid;grid-template-columns:repeat(4,1fr)}
+  .trust-item{display:flex;align-items:center;gap:14px;padding:26px 20px}
+  .trust-item + .trust-item{border-left:1px solid var(--line)}
+  .trust-item .ic{width:46px;height:46px;border-radius:14px;background:var(--brand-tint);display:grid;place-items:center;flex:none}
+  .trust-item .ic svg{width:22px;height:22px;stroke:var(--brand);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .trust-item b{display:block;font-size:16px;line-height:1.3}
+  .trust-item span{font-size:14px;color:var(--muted)}
+
+  /* Sections */
+  section{padding:clamp(72px,9vw,120px) 0}
+  .head{max-width:720px;margin-bottom:52px}
+  .head.center{margin-left:auto;margin-right:auto;text-align:center}
+  .head.center .tag{justify-content:center}
+  .head h2{font-size:clamp(34px,4.4vw,54px);margin:16px 0 14px}
+  .head p{font-size:19px;color:var(--muted)}
+
+  /* Problem */
+  .problem{background:var(--soft)}
+  .pain{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .pain-card{background:var(--surface);border-radius:var(--radius);padding:32px;border:1px solid var(--line)}
+  .pain-card .ic{width:52px;height:52px;border-radius:14px;background:rgba(226,85,58,.14);display:grid;place-items:center;margin-bottom:22px}
+  .pain-card .ic svg{width:26px;height:26px;stroke:#E2553A;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .pain-card h3{font-size:22px;margin-bottom:8px}
+  .pain-card p{color:var(--muted)}
+  .bigstat{margin-top:20px;display:flex;align-items:center;gap:28px;background:var(--bar);color:#fff;border-radius:var(--radius);padding:30px 36px;flex-wrap:wrap}
+  .bigstat b{font-size:clamp(44px,5vw,64px);font-weight:800;letter-spacing:-.03em;color:var(--accent);line-height:1}
+  .bigstat p{font-size:20px;font-weight:600;max-width:520px;flex:1;min-width:220px}
+  .bigstat .btn{margin-left:auto}
+
+  /* Services */
+  .services-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+  .svc{border:1px solid var(--line);border-radius:var(--radius);padding:30px 26px;background:var(--surface);transition:transform .25s,box-shadow .25s,border-color .25s;display:flex;flex-direction:column}
+  .svc:hover{transform:translateY(-6px);box-shadow:var(--shadow);border-color:transparent}
+  .svc .ic{width:56px;height:56px;border-radius:16px;background:var(--brand);display:grid;place-items:center;margin-bottom:24px}
+  .svc .ic svg{width:28px;height:28px;stroke:var(--on-brand);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .svc h3{font-size:21px;margin-bottom:10px}
+  .svc p{color:var(--muted);font-size:16px;flex:1}
+  .svc a{margin-top:22px;font-weight:700;color:var(--brand);display:inline-flex;align-items:center;gap:6px;font-size:15px}
+  .svc a:hover{gap:10px}
+  .svc a svg{width:16px;height:16px}
+
+  /* Steps */
+  .steps-sec{background:var(--soft)}
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;position:relative}
+  .steps::before{content:"";position:absolute;top:34px;left:16%;right:16%;border-top:2px dashed var(--line)}
+  .step{text-align:center;position:relative;padding:0 10px}
+  .step .n{width:68px;height:68px;border-radius:50%;background:var(--surface);border:2px solid var(--brand);color:var(--brand);font-size:24px;font-weight:800;display:grid;place-items:center;margin:0 auto 22px;position:relative;z-index:1}
+  .step:first-child .n{background:var(--brand);color:var(--on-brand)}
+  .step h3{font-size:22px;margin-bottom:8px}
+  .step p{color:var(--muted);max-width:300px;margin:0 auto}
+
+  /* Why — green band */
+  .why{background:var(--band);color:#fff;position:relative;overflow:hidden}
+  .why::before{content:"";position:absolute;right:-180px;top:-180px;width:520px;height:520px;border-radius:50%;background:rgba(255,255,255,.05)}
+  .why .wrap{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;position:relative}
+  .why .tag{color:#FF7A84}
+  .why .tag::before{background:#FF7A84}
+  .why h2{font-size:clamp(34px,4.4vw,54px);margin:16px 0 18px}
+  .why p.lead{color:rgba(255,255,255,.78);font-size:19px;max-width:480px}
+  .why-list{display:grid;gap:14px}
+  .why-item{display:flex;gap:16px;align-items:flex-start;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:18px;padding:20px 22px}
+  .why-item .ok{width:30px;height:30px;border-radius:50%;background:var(--accent);color:var(--on-accent);display:grid;place-items:center;flex:none;margin-top:2px}
+  .why-item .ok svg{width:16px;height:16px}
+  .why-item b{display:block;font-size:18px}
+  .why-item span{color:rgba(255,255,255,.72);font-size:15px}
+  .profile{display:flex;align-items:center;gap:16px;margin-top:32px}
+  .avatar{width:58px;height:58px;border-radius:50%;background:var(--accent);color:var(--on-accent);display:grid;place-items:center;font-weight:800;font-size:20px;flex:none}
+  .profile b{display:block;font-size:18px}
+  .profile span{color:rgba(255,255,255,.7);font-size:15px}
+
+  /* FAQ */
+  .faq{max-width:820px;margin:0 auto;display:grid;gap:12px}
+  details{border:1px solid var(--line);border-radius:16px;background:var(--surface);transition:box-shadow .2s,border-color .2s}
+  details[open]{box-shadow:0 14px 34px -22px rgba(0,0,0,.4);border-color:var(--brand)}
+  summary{list-style:none;cursor:pointer;padding:22px 26px;font-weight:700;font-size:18px;display:flex;justify-content:space-between;align-items:center;gap:20px}
+  summary::-webkit-details-marker{display:none}
+  summary .pm{width:32px;height:32px;border-radius:50%;background:var(--brand-tint);display:grid;place-items:center;flex:none;transition:transform .25s,background .25s}
+  summary .pm svg{width:14px;height:14px;stroke:var(--brand);stroke-width:2.5}
+  details[open] summary .pm{transform:rotate(45deg);background:var(--brand)}
+  details[open] summary .pm svg{stroke:var(--on-brand)}
+  details p{padding:0 26px 24px;color:var(--muted);max-width:680px}
+
+  /* Final CTA */
+  .final{padding:0 0 clamp(72px,9vw,120px)}
+  .final-box{background:var(--band);color:#fff;border-radius:28px;padding:clamp(44px,6vw,80px);display:grid;grid-template-columns:1.3fr .7fr;gap:40px;align-items:center;position:relative;overflow:hidden}
+  .final-box::after{content:"";position:absolute;right:-90px;bottom:-140px;width:380px;height:380px;border-radius:50%;border:60px solid rgba(255,255,255,.07)}
+  .final-box h2{font-size:clamp(34px,4.6vw,58px)}
+  .final-box p{margin-top:16px;font-size:19px;color:rgba(255,255,255,.85);max-width:520px}
+  .final-actions{display:grid;gap:12px;position:relative;z-index:1}
+  .final-actions .btn{width:100%}
+  .final-actions small{text-align:center;color:rgba(255,255,255,.75);font-size:14px}
+
+  /* Footer */
+  footer{border-top:1px solid var(--line);padding:44px 0 36px;font-size:15px;color:var(--muted)}
+  footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
+  footer .contact{display:flex;gap:26px;flex-wrap:wrap;font-weight:600;color:var(--ink)}
+  footer .contact a:hover{color:var(--cta)}
+  .copy{width:100%;border-top:1px solid var(--line);padding-top:22px;margin-top:8px;font-size:13px}
+
+  /* Floating WhatsApp (desktop) */
+  .wa-float{position:fixed;right:24px;bottom:24px;z-index:60;display:flex;align-items:center;gap:10px;background:var(--cta);color:var(--on-cta);font-weight:700;padding:14px 20px 14px 16px;border-radius:999px;box-shadow:0 14px 30px -10px rgba(0,0,0,.35);transition:transform .2s}
+  .wa-float:hover{transform:translateY(-3px)}
+  .wa-float svg{width:26px;height:26px}
+
+  /* Mobile sticky bar */
+  .mbar{display:none}
+
+
+  /* Reveal */
+  .js .reveal{opacity:0;transform:translateY(24px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
+  .js .reveal.in{opacity:1;transform:none}
+  .d1{transition-delay:.08s!important}.d2{transition-delay:.16s!important}.d3{transition-delay:.24s!important}
+
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    .float,.topbar .dot{animation:none}
+    .js .reveal{opacity:1;transform:none;transition:none}
+    .js .bar i{transition:none;width:var(--w)}
+    .js .hl::after{transition:none;transform:scaleX(1)}
+  }
+
+  /* Responsive */
+  @media (max-width:1020px){
+    .hero .wrap,.why .wrap,.final-box{grid-template-columns:1fr}
+    .visual{max-width:520px;margin:20px auto 0;width:100%}
+    .services-grid{grid-template-columns:repeat(2,1fr)}
+    .trust .wrap{grid-template-columns:repeat(2,1fr)}
+    .trust-item:nth-child(3){border-left:none}
+    .trust-item:nth-child(n+3){border-top:1px solid var(--line)}
+    .nav-links a:not(.btn){display:none}
+    .why .wrap{gap:40px}
+  }
+  @media (max-width:720px){
+    body{font-size:16px;padding-bottom:76px}
+    .wrap{padding:0 18px}
+    .topbar .hide-m{display:none}
+    .topbar .wrap{justify-content:center}
+    .nav .wrap{height:66px}
+    .nav .btn{display:none}
+    .hero{padding:44px 0 64px}
+    .hero-cta .btn{width:100%}
+    .f1{left:-6px;bottom:-26px}
+    .f2{right:-6px;top:-28px}
+    .report{padding:20px}
+    .score-row{grid-template-columns:84px 1fr 30px}
+    .trust .wrap{grid-template-columns:1fr}
+    .trust-item + .trust-item{border-left:none;border-top:1px solid var(--line)}
+    .trust-item{padding:18px 4px}
+    .pain,.services-grid,.steps{grid-template-columns:1fr}
+    .steps{gap:40px}
+    .steps::before{display:none}
+    .bigstat{padding:26px}
+    .bigstat .btn{margin-left:0;width:100%}
+    summary{padding:18px 20px;font-size:17px}
+    details p{padding:0 20px 20px}
+    footer .wrap{flex-direction:column;align-items:flex-start}
+    .wa-float{display:none}
+    .mbar{display:grid;grid-template-columns:1fr 1fr;gap:10px;position:fixed;left:0;right:0;bottom:0;z-index:70;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:var(--nav-bg);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-top:1px solid var(--line);box-shadow:0 -10px 30px -16px rgba(11,31,51,.35)}
+    .mbar a{display:flex;align-items:center;justify-content:center;gap:8px;padding:14px 10px;border-radius:12px;font-weight:700;font-size:15px}
+    .mbar svg{width:20px;height:20px}
+    .mbar .m-wa{background:var(--cta);color:var(--on-cta)}
+    
+    .mbar .m-call{background:var(--bar);color:#fff}
+  }
+</style>
+</head>
+<body>
+
+<!-- Íconos reutilizables -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 00-8.6 15.1L2 22l5-1.3A10 10 0 1012 2zm0 18.2a8.2 8.2 0 01-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1112 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 01-3.3-2.9c-.3-.4.3-.4.7-1.3a.5.5 0 000-.4l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 00-.7.3 3 3 0 00-.9 2.2 5.2 5.2 0 001.1 2.7 11.8 11.8 0 004.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 001.8-1.2 2.2 2.2 0 00.1-1.2c0-.1-.2-.2-.5-.3z"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1.9.4 1.8.7 2.7a2 2 0 01-.5 2.1L8 9.8a16 16 0 006 6l1.3-1.3a2 2 0 012.1-.4c.9.3 1.8.6 2.7.7a2 2 0 011.7 2z"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-hoof" viewBox="0 0 200 240"><g fill="none" stroke="currentColor" stroke-width="18" stroke-linejoin="round"><path d="M90 22C58 28 30 76 30 138c0 52 26 82 60 82z"/><path d="M110 22c32 6 60 54 60 116 0 52-26 82-60 82z"/></g></symbol>
+  </defs>
+</svg>
+
+<!-- Barra superior -->
+<div class="topbar">
+  <div class="wrap">
+    <span><i class="dot"></i>Agenda abierta · Respuesta en el día</span>
+    <span class="hide-m">WhatsApp: <a href="https://wa.me/5493534288212?text=Hola%20Bruno%2C%20quiero%20coordinar%20una%20visita%20de%20podolog%C3%ADa%20bovina." target="_blank" rel="noopener">3534-288-212</a></span>
+  </div>
+</div>
+
+<!-- Navegación -->
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a href="#top" class="brand" aria-label="M.V. Bruno Accastello, inicio">
+      <span class="logo"><svg style="color:var(--on-brand)"><use href="#i-hoof"/></svg></span>
+      <span><b>M.V. Bruno Accastello</b><small>Podología bovina</small></span>
+    </a>
+    <nav class="nav-links">
+      <a href="#servicios">Servicios</a>
+      <a href="#proceso">Cómo trabajo</a>
+      <a href="#preguntas">Preguntas</a>
+      <a href="#contacto" class="btn btn-primary btn-sm">Pedir visita</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <div class="badge reveal"><span>MP 4568</span>Médico veterinario · Podología bovina</div>
+      <h1 class="reveal d1">Menos cojeras.<br><span class="hl">Más producción.</span></h1>
+      <p class="sub reveal d2">Recorte funcional, tratamiento y prevención de cojeras en tu campo. Para tambos y rodeos de carne.</p>
+      <div class="hero-cta reveal d3">
+        <a class="btn btn-primary" href="https://wa.me/5493534288212?text=Hola%20Bruno%2C%20quiero%20coordinar%20una%20visita%20de%20podolog%C3%ADa%20bovina." target="_blank" rel="noopener">
+          <svg><use href="#i-wa"/></svg>Pedir visita por WhatsApp
+        </a>
+        <a class="btn btn-outline" href="tel:+5493534288212"><svg><use href="#i-phone"/></svg>Llamar ahora</a>
+      </div>
+      <ul class="checks reveal d3">
+        <li><svg style="color:var(--brand)"><use href="#i-check"/></svg>Vamos a tu campo</li>
+        <li><svg style="color:var(--brand)"><use href="#i-check"/></svg>Equipo móvil propio</li>
+        <li><svg style="color:var(--brand)"><use href="#i-check"/></svg>Informe por animal</li>
+      </ul>
+    </div>
+
+    <div class="visual reveal d2" aria-hidden="true">
+      <div class="float f2">
+        <span class="ic" style="background:var(--accent)"><svg style="color:var(--on-accent)"><use href="#i-check"/></svg></span>
+        <span>Respuesta en el día<small>por WhatsApp o llamada</small></span>
+      </div>
+
+      <div class="report">
+        <div class="report-head">
+          <div><b>Informe de rodeo</b><small>Ejemplo de lo que recibís</small></div>
+          <span class="pill">Visita completa</span>
+        </div>
+        <div class="score">
+          <div class="score-row"><span>Sanas</span><div class="bar"><i style="--w:78%"></i></div><em>78%</em></div>
+          <div class="score-row"><span>Leves</span><div class="bar y"><i style="--w:15%"></i></div><em>15%</em></div>
+          <div class="score-row"><span>A tratar</span><div class="bar r"><i style="--w:7%"></i></div><em>7%</em></div>
+        </div>
+        <div class="cases">
+          <div class="case"><div><b>Caravana 1024</b> <span>· Úlcera de suela</span></div><span class="ok"><svg style="color:var(--on-brand)"><use href="#i-check"/></svg></span></div>
+          <div class="case"><div><b>Caravana 0877</b> <span>· Dermatitis digital</span></div><span class="ok"><svg style="color:var(--on-brand)"><use href="#i-check"/></svg></span></div>
+          <div class="case"><div><b>Caravana 1311</b> <span>· Recorte preventivo</span></div><span class="ok"><svg style="color:var(--on-brand)"><use href="#i-check"/></svg></span></div>
+        </div>
+      </div>
+
+      <div class="float f1">
+        <span class="ic" style="background:var(--brand)"><svg style="color:var(--on-brand);width:18px;height:22px"><use href="#i-hoof"/></svg></span>
+        <span>Tambos y feedlots<small>Leche y carne</small></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Franja de confianza -->
+<div class="trust">
+  <div class="wrap">
+    <div class="trust-item reveal">
+      <span class="ic"><svg viewBox="0 0 24 24"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg></span>
+      <div><b>Médico veterinario</b><span>Matrícula profesional 4568</span></div>
+    </div>
+    <div class="trust-item reveal d1">
+      <span class="ic"><svg viewBox="0 0 24 24"><path d="M1 17V6h13v11M14 10h4l4 4v3h-2M5 17a2 2 0 104 0 2 2 0 00-4 0zm11 0a2 2 0 104 0 2 2 0 00-4 0zM9 17h7"/></svg></span>
+      <div><b>Atención en campo</b><span>Equipo móvil propio</span></div>
+    </div>
+    <div class="trust-item reveal d2">
+      <span class="ic"><svg viewBox="0 0 24 24"><path d="M12 21s-7-4.5-7-11a4 4 0 017-2.6A4 4 0 0119 10c0 6.5-7 11-7 11z"/></svg></span>
+      <div><b>Bienestar animal</b><span>Manejo tranquilo y seguro</span></div>
+    </div>
+    <div class="trust-item reveal d3">
+      <span class="ic"><svg viewBox="0 0 24 24"><path d="M4 20V10m6 10V4m6 16v-7m4 7H2"/></svg></span>
+      <div><b>Resultados medibles</b><span>Registro por animal</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- PROBLEMA -->
+<section class="problem" id="por-que">
+  <div class="wrap">
+    <div class="head center">
+      <div class="tag reveal">El problema</div>
+      <h2 class="reveal d1">Una vaca que cojea te cuesta plata todos los días.</h2>
+      <p class="reveal d2">Y muchas veces el problema se ve recién cuando ya es tarde.</p>
+    </div>
+    <div class="pain">
+      <div class="pain-card reveal">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="M7 8l4 4 3-3 6 6"/></svg></div>
+        <h3>Baja la producción</h3>
+        <p>Come menos, camina menos y rinde menos: litros y kilos que se pierden.</p>
+      </div>
+      <div class="pain-card reveal d1">
+        <div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div>
+        <h3>Se atrasa la preñez</h3>
+        <p>El dolor afecta el celo y la fertilidad. Más días abiertos.</p>
+      </div>
+      <div class="pain-card reveal d2">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 9v4m0 4h.01"/><path d="M10.3 3.9L1.8 18a2 2 0 001.7 3h17a2 2 0 001.7-3L13.7 3.9a2 2 0 00-3.4 0z"/></svg></div>
+        <h3>Más descartes</h3>
+        <p>Animales que salen antes del rodeo por problemas de patas.</p>
+      </div>
+    </div>
+    <div class="bigstat reveal">
+      <b>9 de 10</b>
+      <p>cojeras se originan en la pezuña. Se pueden prevenir y tratar a tiempo.</p>
+      <a href="#contacto" class="btn btn-yellow">Quiero prevenirlo<svg><use href="#i-arrow"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICIOS -->
+<section id="servicios">
+  <div class="wrap">
+    <div class="head">
+      <div class="tag reveal">Servicios</div>
+      <h2 class="reveal d1">Todo para la salud podal de tu rodeo.</h2>
+      <p class="reveal d2">Un solo profesional, de la prevención al tratamiento.</p>
+    </div>
+    <div class="services-grid">
+      <div class="svc reveal">
+        <div class="ic"><svg viewBox="0 0 24 24"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M20 4L8.1 15.9M14.5 14.5L20 20M8.1 8.1L12 12"/></svg></div>
+        <h3>Recorte funcional</h3>
+        <p>Equilibra el apoyo de cada pezuña y previene lesiones.</p>
+        <a href="#contacto">Consultar<svg><use href="#i-arrow"/></svg></a>
+      </div>
+      <div class="svc reveal d1">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M10.5 20.5l10-10a4.95 4.95 0 10-7-7l-10 10a4.95 4.95 0 107 7z"/><path d="M8.5 8.5l7 7"/></svg></div>
+        <h3>Tratamiento de cojeras</h3>
+        <p>Úlceras, dermatitis digital y línea blanca. Tacos y vendajes.</p>
+        <a href="#contacto">Consultar<svg><use href="#i-arrow"/></svg></a>
+      </div>
+      <div class="svc reveal d2">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/><path d="M9 13l2 2 4-4"/></svg></div>
+        <h3>Diagnóstico y registro</h3>
+        <p>Evaluación de locomoción y registro de lesiones por animal.</p>
+        <a href="#contacto">Consultar<svg><use href="#i-arrow"/></svg></a>
+      </div>
+      <div class="svc reveal d3">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6z"/></svg></div>
+        <h3>Plan preventivo</h3>
+        <p>Pediluvios, calendario de recorte y capacitación del personal.</p>
+        <a href="#contacto">Consultar<svg><use href="#i-arrow"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESO -->
+<section class="steps-sec" id="proceso">
+  <div class="wrap">
+    <div class="head center">
+      <div class="tag reveal">Cómo trabajo</div>
+      <h2 class="reveal d1">Simple. En 3 pasos.</h2>
+    </div>
+    <div class="steps">
+      <div class="step reveal">
+        <div class="n">1</div>
+        <h3>Me escribís</h3>
+        <p>Por WhatsApp o llamada. Coordinamos día y cantidad de animales.</p>
+      </div>
+      <div class="step reveal d1">
+        <div class="n">2</div>
+        <h3>Voy a tu campo</h3>
+        <p>Evalúo el rodeo, recorto y trato en el lugar, con equipo propio.</p>
+      </div>
+      <div class="step reveal d2">
+        <div class="n">3</div>
+        <h3>Recibís el informe</h3>
+        <p>Registro por animal y un plan para que no vuelva a pasar.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- POR QUÉ -->
+<section class="why">
+  <div class="wrap">
+    <div>
+      <div class="tag reveal">Por qué elegirme</div>
+      <h2 class="reveal d1">Un especialista. No un servicio más.</h2>
+      <p class="lead reveal d2">Me dedico a la salud podal bovina. Sé lo que una cojera le cuesta a tu campo y cómo evitarla.</p>
+      <div class="profile reveal d3">
+        <div class="avatar">BA</div>
+        <div><b>M.V. Bruno Accastello</b><span>Médico veterinario · MP 4568</span></div>
+      </div>
+    </div>
+    <div class="why-list">
+      <div class="why-item reveal">
+        <span class="ok"><svg><use href="#i-check"/></svg></span>
+        <div><b>Atención personalizada</b><span>Hablás directo con el veterinario que va a tu campo.</span></div>
+      </div>
+      <div class="why-item reveal d1">
+        <span class="ok"><svg><use href="#i-check"/></svg></span>
+        <div><b>Prevención, no solo urgencias</b><span>Un plan para bajar las cojeras de forma sostenida.</span></div>
+      </div>
+      <div class="why-item reveal d2">
+        <span class="ok"><svg><use href="#i-check"/></svg></span>
+        <div><b>Datos claros</b><span>Sabés qué tiene cada animal y qué se hizo.</span></div>
+      </div>
+      <div class="why-item reveal d3">
+        <span class="ok"><svg><use href="#i-check"/></svg></span>
+        <div><b>Bienestar animal</b><span>Manejo tranquilo, seguro para el animal y el personal.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="preguntas">
+  <div class="wrap">
+    <div class="head center">
+      <div class="tag reveal">Preguntas frecuentes</div>
+      <h2 class="reveal d1">Lo que más me preguntan.</h2>
+    </div>
+    <div class="faq">
+      <details class="reveal">
+        <summary>¿Cada cuánto hay que hacer el recorte?<span class="pm"><svg viewBox="0 0 14 14"><path d="M7 1v12M1 7h12" fill="none"/></svg></span></summary>
+        <p>Depende del rodeo, el piso y la alimentación. En tambo lo habitual es un recorte preventivo antes del secado y otro durante la lactancia. Lo definimos juntos en la primera visita.</p>
+      </details>
+      <details class="reveal d1">
+        <summary>¿Trabajás con establecimientos chicos?<span class="pm"><svg viewBox="0 0 14 14"><path d="M7 1v12M1 7h12" fill="none"/></svg></span></summary>
+        <p>Sí. Atiendo establecimientos de cualquier tamaño, de leche y de carne. Escribime con la cantidad de animales y armamos la visita.</p>
+      </details>
+      <details class="reveal d2">
+        <summary>¿Necesito tener manga o cepo?<span class="pm"><svg viewBox="0 0 14 14"><path d="M7 1v12M1 7h12" fill="none"/></svg></span></summary>
+        <p>En lo posible, sí. También necesito una fuente de energía eléctrica cercana al lugar de trabajo.</p>
+      </details>
+      <details class="reveal d3">
+        <summary>¿Cómo coordino una visita?<span class="pm"><svg viewBox="0 0 14 14"><path d="M7 1v12M1 7h12" fill="none"/></svg></span></summary>
+        <p>Mandame un WhatsApp o llamame al 3534-288-212. Te respondo en el día y coordinamos fecha.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<div class="final" id="contacto">
+  <div class="wrap">
+    <div class="final-box reveal">
+      <div>
+        <h2>¿Tenés vacas que caminan mal?</h2>
+        <p>No esperes a que se note en tu bolsillo. Coordinemos una visita esta semana.</p>
+      </div>
+      <div class="final-actions">
+        <a class="btn btn-yellow" href="https://wa.me/5493534288212?text=Hola%20Bruno%2C%20quiero%20coordinar%20una%20visita%20de%20podolog%C3%ADa%20bovina." target="_blank" rel="noopener">
+          <svg><use href="#i-wa"/></svg>Escribir por WhatsApp
+        </a>
+        <a class="btn btn-white-outline" href="tel:+5493534288212"><svg><use href="#i-phone"/></svg>3534-288-212</a>
+        <small>Respuesta en el día</small>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <a href="#top" class="brand">
+      <span class="logo"><svg style="color:var(--on-brand)"><use href="#i-hoof"/></svg></span>
+      <span><b>M.V. Bruno Accastello</b><small>Podología bovina</small></span>
+    </a>
+    <div class="contact">
+      <a href="tel:+5493534288212">3534-288-212</a>
+      <a href="mailto:bruno_accastello@hotmail.com">bruno_accastello@hotmail.com</a>
+    </div>
+    <div class="copy">© <span id="y">2026</span> M.V. Bruno Accastello · MP 4568</div>
+  </div>
+</footer>
+
+<!-- WhatsApp flotante (escritorio) -->
+<a class="wa-float" href="https://wa.me/5493534288212?text=Hola%20Bruno%2C%20quiero%20coordinar%20una%20visita%20de%20podolog%C3%ADa%20bovina." target="_blank" rel="noopener" aria-label="Escribir por WhatsApp">
+  <svg><use href="#i-wa"/></svg>¿Consultas?
+</a>
+
+<!-- Barra fija (celular) -->
+<div class="mbar">
+  <a class="m-wa" href="https://wa.me/5493534288212?text=Hola%20Bruno%2C%20quiero%20coordinar%20una%20visita%20de%20podolog%C3%ADa%20bovina." target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>WhatsApp</a>
+  <a class="m-call" href="tel:+5493534288212"><svg><use href="#i-phone"/></svg>Llamar</a>
+</div>
+
+<script>
+  const nav = document.getElementById('nav');
+  const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 50);
+  window.addEventListener('scroll', onScroll, {passive:true}); onScroll();
+
+  // Animaciones del hero al cargar
+  requestAnimationFrame(() => setTimeout(() => document.querySelector('.hero').classList.add('loaded'), 60));
+
+  // Aparición suave al hacer scroll
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, {threshold:.12, rootMargin:'0px 0px -30px 0px'});
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  // Solo un acordeón abierto a la vez
+  document.querySelectorAll('.faq details').forEach(d => d.addEventListener('toggle', () => {
+    if (d.open) document.querySelectorAll('.faq details').forEach(o => { if (o !== d) o.open = false; });
+  }));
+
+  document.getElementById('y').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
